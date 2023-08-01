@@ -1,11 +1,13 @@
-<h1>Please Select</h1>
-<div *ngFor="let item of childInventory" style="display: flex; justify-content: space-around; align-items: center;">
-    <div class="name" style="margin: 0 10px;">
-        Name: {{item.name}}
+<h1>Please Select 🛒</h1>
+<div style="border-style: solid; padding: 20px;">
+    <div *ngFor="let item of childInventory" style="display: flex; justify-content: space-around; align-items: center;">
+        <div class="name" style="margin: 0 10px;">
+            Name: {{item.name}}
+        </div>
+        <div class="description" style="margin: 0 10px;">
+            Description: {{item.description}}
+        </div>
+        <img [src]="item.image" style="margin: 0 10px;">
+        <button (click)="addItem(item)">Add</button>
     </div>
-    <div class="description" style="margin: 0 10px;">
-        Description: {{item.description}}
-    </div>
-    <img [src]="item.image" style="margin: 0 10px;">
-    <button (click)="addItem(item)">Add</button>
 </div>
