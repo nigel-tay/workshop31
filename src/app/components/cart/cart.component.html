@@ -1,7 +1,7 @@
-<h1>Cart</h1>
-<div *ngFor="let cartItem of cart">
-    <div>{{cartItem.name}}</div>
-    <div>{{cartItem.description}}</div>
-    <div>{{cartItem.image}}</div>
-    <div>{{cartItem.quantity}}</div>
+<h1>My Cart</h1>
+<div *ngFor="let cartItem of cart" style="display: flex; justify-content: space-around; align-items: center;">
+    <div style="margin: 0 10px;">{{cartItem.name}}</div>
+    <div style="margin: 0 10px;">{{cartItem.description}}</div>
+    <img [src]="cartItem.image" style="margin: 0 10px;">
+    <div style="margin: 0 10px;">{{cartItem.quantity}}</div>
 </div>

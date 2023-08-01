@@ -27,6 +27,9 @@ export class AppComponent implements OnInit{
   }
 
   // DO REMOVE
+  reduceItemCart(cartItem: Cart) {
+    
+  }
 
 
 }
