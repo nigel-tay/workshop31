@@ -28,7 +28,13 @@ export class AppComponent implements OnInit{
 
   // DO REMOVE
   reduceItemCart(cartItem: Cart) {
+    let foundCartItem = this.cart.find((ele) => ele.name === cartItem.name);
     
+    if (cartItem.quantity <= 1) {
+      let index = this.cart.indexOf(foundCartItem);
+      this.cart.splice(index, 1);
+    }
+    cartItem.quantity--;
   }
 
 

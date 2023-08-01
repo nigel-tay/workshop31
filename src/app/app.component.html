@@ -1,5 +1,6 @@
 <div style="display: flex; justify-content: space-around;">
   <app-inventory [childInventory]="inventory"
                   (addItemEvent)="passItemToCart($event)"></app-inventory>
-  <app-cart [cart]="cart"></app-cart>
+  <app-cart [cart]="cart"
+                  (reduceCartItemEvent)="reduceItemCart($event)"></app-cart>
 </div>

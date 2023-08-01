@@ -1,6 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Cart } from 'src/app/cart';
-import { Item } from 'src/app/item';
 
 @Component({
   selector: 'app-cart',
@@ -9,8 +8,11 @@ import { Item } from 'src/app/item';
 })
 export class CartComponent {
   @Input() cart: Cart[];
+  @Output() reduceCartItemEvent = new EventEmitter;
   
-  
+  reduceItemCart(cartItem: Cart) {
+    this.reduceCartItemEvent.emit(cartItem);
+  }
 
 
 }

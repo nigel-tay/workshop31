@@ -5,5 +5,6 @@
         <div style="margin: 0 10px;">{{cartItem.description}}</div>
         <img [src]="cartItem.image" style="margin: 0 10px;">
         <div style="margin: 0 10px;">{{cartItem.quantity}}</div>
+        <button (click)="reduceItemCart(cartItem)">Remove</button>
     </div>
 </div>
